@@ -13,7 +13,7 @@
 
 <div id="image2" style="position: relative;width: 100%; height: auto;">
 <img src="nihk(1).jpg" width=100% height=auto />
-<div id="div3" style="position: absolute; top: 68%; left: 15%;width: 250px;height: 450px;border-radius: 300px;border: 0px solid #808080;font-size:30px;"></div>
+<div id="div3" style="position: absolute; top: 68%; left: 45%;width: 250px;height: 450px;border-radius: 300px;border: 0px solid #808080;font-size:30px;"></div>
 <script>
     function time() {
         var date = new Date();
@@ -27,9 +27,9 @@
             }
         return str
         }
-        var str3 = "&nbsp;&nbsp;"+seconds+ ":" + timeAdd0(milliseconds)+"&nbsp;&nbsp;&nbsp;";
+        var str3 = "&nbsp;&nbsp;"+seconds+ "&nbsp;&nbsp;&nbsp;" + timeAdd0(milliseconds)+"&nbsp;&nbsp;&nbsp;";
         var div3= document.getElementById("div3");
-        div3.style.color="#ff0000";
+        div3.style.color="#d5733f";
         div3.innerHTML = str3;
     }
     setInterval(time,1);
