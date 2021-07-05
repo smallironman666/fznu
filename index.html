@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.5 , user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通行证</title>
+    <style>
+        body{text-align:center}
+    </style>
+</head>
+
+<div id="image2" style="position: relative;width: 100%; height: auto;">
+<img src="nihk(1).jpg" width=100% height=auto />
+<div id="div3" style="position: absolute; top: 68%; left: 15%;width: 250px;height: 450px;border-radius: 300px;border: 0px solid #808080;font-size:30px;"></div>
+<script>
+    function time() {
+        var date = new Date();
+        var hour = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds().toString();
+        var milliseconds = date.getMilliseconds().toString();
+        function timeAdd0(str) {
+            if(str.length<3){
+                str='0'+str;
+            }
+        return str
+        }
+        var str3 = "&nbsp;&nbsp;"+seconds+ ":" + timeAdd0(milliseconds)+"&nbsp;&nbsp;&nbsp;";
+        var div3= document.getElementById("div3");
+        div3.style.color="#ff0000";
+        div3.innerHTML = str3;
+    }
+    setInterval(time,1);
+</script>
+
+
+
+
+</div> 
+
