@@ -22,6 +22,9 @@
         var seconds = date.getSeconds().toString();
         var milliseconds = date.getMilliseconds().toString();
         function timeAdd0(str) {
+            if(str.length<2){
+                str='00'+str;
+            }
             if(str.length<3){
                 str='0'+str;
             }
