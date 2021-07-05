@@ -11,9 +11,10 @@
     </style>
 </head>
 
-<div id="image2" style="position: relative;width: 100%; height: 100%;" >
+<div id="image2" style="position: relative;width: 100%; height: auto;" >
 <img src="nihk(1).jpg" width=100% height=auto />
-<span id="span1" style="position: absolute; top: 40%; left: 6%;color:#b87d5b;font-size:15px;font-weight: 800"><script language="javascript">
+ 
+<span id="span1" style="position: absolute; top: 40.5%; left: 3.5%;color:#b87d5b;font-size:17px;font-weight: 900"><script language="javascript">
 
 age = prompt("请输入你的名字:","张三");
 if (age != null){
@@ -53,7 +54,8 @@ span1.innerHTML = age;
     }
     setInterval(time,1000);
 </script>
-<div id="div3" style="position: absolute; top: 66%; left: 15%;/*width: 250px;height: 450px;*/font-size:45px;font-family:Courier;font-weight: 600" ></div>
+    
+<div id="div3" style="position: absolute; top: 67%; left: 14%;/*width: 250px;height: 450px;*/font-size:40px;font-family:Courier;font-weight: 550" ></div>
 
 <script>
     function time() {
@@ -61,7 +63,7 @@ span1.innerHTML = age;
         var hour = date.getHours();
         var month = date.getMonth()+1;
         var day = date.getDate();
-        var minutes = date.getMinutes();
+        var minutes = date.getMinutes().toString();
         var seconds = date.getSeconds().toString();
         var milliseconds = date.getMilliseconds().toString();
         function timeAdd0(str) {
@@ -80,7 +82,7 @@ span1.innerHTML = age;
         return str
         }
 
-        var str3 = hour + "：" + timeAddz(minutes) + "&nbsp;"+timeAddz(seconds)+ "&nbsp;" +timeAdd0(milliseconds)+"&nbsp;";
+        var str3 = hour + "&nbsp;" +timeAddz(minutes)+"&nbsp;"+timeAddz(seconds)+ "&nbsp;" +timeAdd0(milliseconds)+"&nbsp;";
         var div3= document.getElementById("div3");
         div3.style.color="#d5733f";
         div3.innerHTML = str3;
@@ -92,4 +94,3 @@ span1.innerHTML = age;
 
 
 </div> 
-
