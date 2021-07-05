@@ -26,7 +26,7 @@ var span1 = document.getElementById("span1");
 span1.innerHTML = age;
 </script></span>
 -->
-<div id="div3" style="position: absolute; top: 66%; left: 14%;/*width: 250px;height: 450px;*/font-size:40px;font-family:Courier;font-weight: 400" ></div>
+<div id="div3" style="position: absolute; top: 67%; left: 14%;/*width: 250px;height: 450px;*/font-size:40px;font-family:Courier;font-weight: 450" ></div>
 
 <script>
     function time() {
@@ -34,7 +34,7 @@ span1.innerHTML = age;
         var hour = date.getHours();
         var month = date.getMonth()+1;
         var day = date.getDate();
-        var minutes = date.getMinutes();
+        var minutes = date.getMinutes().toString();
         var seconds = date.getSeconds().toString();
         var milliseconds = date.getMilliseconds().toString();
         function timeAdd0(str) {
@@ -53,7 +53,7 @@ span1.innerHTML = age;
         return str
         }
 
-        var str3 = hour + ":" + timeAddz(minutes) + ":"+timeAddz(seconds)+ "&nbsp;" +timeAdd0(milliseconds)+"&nbsp;";
+        var str3 = hour + "&nbsp;" +timeAddz(minutes)+"&nbsp;"+timeAddz(seconds)+ "&nbsp;" +timeAdd0(milliseconds)+"&nbsp;";
         var div3= document.getElementById("div3");
         div3.style.color="#d5733f";
         div3.innerHTML = str3;
