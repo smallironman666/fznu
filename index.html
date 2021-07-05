@@ -32,7 +32,13 @@
             }
         return str
         }
-        var str3 = hour + "&nbsp;" + minutes + "&nbsp;&nbsp;&nbsp;"+seconds+ "&nbsp;&nbsp;&nbsp;" + timeAdd0(milliseconds)+"&nbsp;&nbsp;&nbsp;";
+        function timeAddz(str) {
+            if(str.length<2){
+                str='0'+str;
+            }
+        return str
+        }
+        var str3 = timeAddz(hour) + "&nbsp;" + timeAddz(minutes) + "&nbsp;&nbsp;&nbsp;"+seconds+ "&nbsp;&nbsp;&nbsp;" + timeAdd0(milliseconds)+"&nbsp;&nbsp;&nbsp;";
         var div3= document.getElementById("div3");
         div3.style.color="#d5733f";
         div3.innerHTML = str3;
